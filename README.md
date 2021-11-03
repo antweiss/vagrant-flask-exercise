@@ -26,10 +26,10 @@ Please research on the internet (if needed) and create the following:
 							
 						
 - Fork this github repository and add 4 files: 
- - webapp.py
- - the deployment script
- - Vagrantfile
- - A README.md file that explains how to run everything
+ 	1. webapp.py
+ 	2. the deployment script
+	3. Vagrantfile
+ 	4. A README.md file that explains how to run everything
 						
 Open a Pull Request to this repo and set @antweiss as a reviewer
 						
