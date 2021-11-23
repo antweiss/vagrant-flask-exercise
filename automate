@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#this script was created to automate the installing process
+
+sudo apt update 
+
+sudo apt install virtualbox virtualbox-ext-pack -y
+
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+sudo apt-get update && sudo apt-get install vagrant
+
+sudo apt install curl -y
+
+curl -LJO https://raw.githubusercontent.com/georgef21/vagrant-flask-exercise/main/Vagrantfile
+
+mkdir test
+
+mv Vagrantfile test
+
+cd test
+
+vagrant up

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+sudo apt-get update -y
+
+sudo ufw allow 5000
+
+sudo apt install python3.8 -y
+
+sudo apt install python3-pip -y
+
+sudo apt install python3-venv -y
+
+sudo apt install curl -y
+
+curl --version
+
+curl -LJO https://raw.githubusercontent.com/georgef21/vagrant-flask-exercise/main/webapp.py
+
+cp webapp.py /var/webapp
+
+mkdir project
+
+cp webapp.py project
+
+cd project
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install Flask
+
+python -m flask --version
+
+export FLASK_APP=webapp.py
+
+flask run --host=0.0.0.0
